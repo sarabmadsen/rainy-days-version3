@@ -1,0 +1,79 @@
+/*Global styles*/
+
+h1 {
+  grid-area: h1;
+}
+
+.image {
+  grid-area: image;
+  max-width: 880px;
+  width: 100%;
+}
+
+.text-area {
+  grid-area: text-area;
+  max-width: 800px;
+}
+
+.heading2 {
+  grid-area: heading2;
+}
+
+.some {
+  grid-area: some;
+}
+
+.some img {
+  max-width: 180px;
+  width: 100%;
+}
+
+.some p {
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+
+
+/*Mobile styles*/
+@media only screen and (max-width: 659px) {
+  main {
+    grid-template-areas:
+      "h1"
+      "image"
+      "text-area"
+      "heading2"
+      "some";
+  }
+  .some {
+    margin: 0 auto;
+  }
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 660px) {
+  main {
+    grid-template-areas:
+      "h1 h1"
+      "text-area image"
+      "heading2 heading2"
+      "some some";
+  }
+  .some {
+    display: flex;
+    flex-direction: row;
+  }
+  .box {
+    margin: 1rem;
+  }
+  .image {
+    min-width: 300px;
+  }
+  .some img:hover {
+    filter: opacity(70%);
+  }
+}

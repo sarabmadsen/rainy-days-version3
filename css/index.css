@@ -1,0 +1,108 @@
+/*Global styles*/
+
+.image1 {
+  grid-area: image1;
+}
+
+.text1 {
+  grid-area: text1;
+}
+
+.image2 {
+  grid-area: image2;
+}
+
+.text2 {
+  grid-area: text2;
+}
+
+main img {
+  width: 100%;
+} 
+
+.link {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.button {
+  background: #8f3e00;
+  box-shadow: 2px 5px 16px 0px #0b325e, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  border: solid 2px #8f3e00;
+  display: block;
+  width: 90px;
+  text-align: center;
+  margin: auto;
+}
+
+/*Mobile styles*/
+@media only screen and (max-width: 659px) {
+  main {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "image1"
+      "text1"
+      "image2"
+      "text2";
+  }
+  main p {
+    display: none;
+  }
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+  .link {
+    width: 80px;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 660px) {
+  main {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-areas:
+      "image1 text1"
+      "text2 image2";
+  }
+  .text1 {
+    margin: 0 0 1rem 1rem;
+  }
+  .text2 {
+    text-align: right;
+    margin: 0 0 1rem 0;
+  }
+  .button:hover {
+    color: #8f3e00;
+    background: white;
+    border: solid 2px #8f3e00;
+  }
+  .image1 {
+    margin: 2rem 0 0 0;
+  }
+  .image2 {
+    margin: 1rem 0 1rem 1rem;
+  }
+  h1 {
+    margin: 2rem 0 -1rem 0;
+  }
+  .text2 h2 {
+    margin: 1rem 0 -1rem 0;
+  }
+  p {
+    margin: -0.5rem 0 0 0;
+  }
+  .button {
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+
+}

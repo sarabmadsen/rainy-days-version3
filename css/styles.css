@@ -1,0 +1,227 @@
+/*global styles*/
+
+@font-face {
+  font-family: "Roadgeek 2005 Mittelschrift";
+  src: url("roadgeek-2005-mittelschrift.ttf") format("ttf");
+}
+
+body {
+  font-family: "roadgeek-2005-mittelschrift", Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+a {
+  border: 2px #0b3a40;
+  color: #0b3a40;
+}
+
+.logo {
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+header img {
+  width: 100%;
+}
+
+li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+i {
+  color: white;
+}
+
+.current {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1300px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+form {
+  background-color: #cfcfcf;
+  border: solid #0b3a40;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+fieldset {
+  border: none;
+}
+
+input[type="submit"] {
+  color: white;
+  background-color: #0b3a40;
+  border: 2px solid #0b3a40;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #0b3a40;
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer p {
+  flex: 20;
+  margin: 0 0 0 1rem;
+}
+
+.footer-symbol1 {
+  flex: 1;
+}
+
+.footer-symbol2 {
+  flex: 1;
+}
+
+/*mobile styles*/
+
+@media only screen and (max-width: 659px) {
+  body {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 5px;
+    display: block;
+  }
+  i {
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 5px;
+  }
+  nav,
+  #hamburger-menu {
+    display: none;
+  }
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+  .menu {
+    background-color: #0b3a40;
+    display: flex;
+    flex-direction: row;
+  }
+  .item1 {
+    flex: 10;
+  }
+  .item2 {
+    flex: 1;
+  }
+  .item3 {
+    flex: 1;
+  }
+}
+
+/*desktop styles*/
+
+@media only screen and (min-width: 660px) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  a:hover {
+    border: 2px #8f3e00;
+    color: #8f3e00;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 0 3%;
+    flex: 1;
+    max-width: 135px;
+  }
+  i {
+    font-size: 1.6rem;
+    padding: 5px;
+    margin: 5px;
+  }
+  nav a {
+    padding: 10px;
+  }
+  .menu i {
+    padding: 10px;
+  }
+  nav a:hover {
+    background-color: #8f3e00;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+  }
+  .menu i:hover {
+    background-color: #8f3e00;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+  }
+  .hamburger-label,
+  #hamburger-menu {
+    display: none;
+  }
+  .menu {
+    background-color: #0b3a40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .item1 {
+    flex: 20;
+  }
+  .item2 {
+    flex: 1;
+  }
+  .item3 {
+    flex: 1;
+  }
+  input[type="submit"]:hover {
+    background-color: white;
+    border: solid 2px #0b3a40;
+    color: #0b3a40;
+  }
+}

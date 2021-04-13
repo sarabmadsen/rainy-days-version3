@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shopping cart | Rainy Days</title>
+    <meta name="description" content="Your shopping cart." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/shopping-cart.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/17d5012144.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Hotjar Tracking Code for https://practical-mclean-0f915f.netlify.app -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:2262304,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="images/rainydays-logo.png" alt="RainyDays | Pushing the comfort zone"
+        /></a>
+      </div>
+      <section class="menu">
+        <div>
+          <a href="javascript:window.history.back()" aria-label="Go back"><i class="fas fa-arrow-left"></i></a>
+        </div>
+          <div class="item1">
+            <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="hamburger-menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jackets.html">Jackets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+            </div>
+            <div class="item2">
+              <a href="shopping-cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="item3">
+                <i class="fas fa-search"></i>
+            </div>
+      </section>
+    </header>
+    <main>
+      <h1>Shopping cart</h1>
+      <section class="image">
+        <img class="cover" src="images/the-yellow-one2.jpg" alt="The yellow one">
+      </section>
+      <section class="product">
+        <a href="/jackets/the-yellow-one.html">The Yellow One</a>
+        <p>NOK 599,-</p>
+        <p>Size: Medium</p>
+        <i class="fas fa-trash-alt"></i>
+      </section>
+      <section class="summary">
+        <p>Free shipping.</p>
+        <p class="bold">Total amount: NOK 599,-</p>
+      </section>
+      <section class="button">
+        <a href="jackets.html">Continue shopping</a>
+      </section>
+      <h2>Checkout</h2>
+      <form action="form-success.php" method="POST">
+        <p class="steps">Step 1 out of 2</p>
+        <fieldset>
+          <div>
+            <label for="name">Full name*</label>
+            <input type="text" name="name" id="name" class="form__input" />
+            <div class="form-error" id="nameError">Please enter your full name</div>
+          </div>
+          <div>
+            <label for="address">Shipping address*</label>
+            <input type="text" name="address" id="address" class="form__input"/>
+            <div class="form-error" id="addressError">Please enter your address</div>
+          </div>
+         <div>
+          <label for="email">Email address*</label>
+          <input type="email" name="email" id="email" class="form__input"/>
+          <div class="form-error" id="emailError">Please enter a valid email address</div>
+         </div>
+          <div>
+            <label for="code">Discount code</label>
+            <input type="text" name="code" id="code" class="form__input" />
+          </div>
+          <div>
+            <input type="checkbox" id="accept" name="accept" value="accept"/>
+            <label for="accept">I accept the terms & conditions*</label>
+            <div class="form-error" id="checkboxError">Please accept our terms & conditions</div>
+          </div>
+          <input type="submit" value="Continue to payment" id=checkout-button>
+        </fieldset>
+      </form>
+      <section class="checkout-success">
+        <p class="x"><i class="fas fa-times"></i></p>
+        <h3>Checkout success!</h3>
+        <p class ="name-text"></p>
+        <p>We appreciate any feedback</p>
+        <p>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+        </p>
+        <p class="button">
+          <a href="jackets.html">Continue shopping</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy</p>
+      <div class="footer-symbol1">
+          <i class="fab fa-instagram"></i>
+      </div>
+      <div class="footer-symbol2">
+          <i class="fab fa-facebook"></i>
+      </div>
+    </footer>
+    <script src="js/shopping-cart.js"></script>
+    <script src="js/shopping-cart-checkout.js"></script>
+  </body>
+</html>

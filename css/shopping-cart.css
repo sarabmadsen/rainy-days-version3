@@ -1,0 +1,186 @@
+/*Global styles*/
+
+main {
+  max-width: 1000px;
+}
+
+h1 {
+  grid-area: h1;
+}
+
+.image {
+  grid-area: image;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+main img {
+  max-width: 200px;
+  height: 279px;
+  width: 100%;
+}
+
+.product {
+  grid-area: product;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.button {
+  grid-area: button;
+}
+
+.button a {
+  background: rgb(7, 32, 13);
+  background: #0c3816;
+  box-shadow: 2px 5px 16px 0px #0b325e, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  border: solid 2px #0c3816;
+}
+
+h2 {
+  grid-area: h2;
+}
+
+.form__input {
+  display: block;
+}
+
+label,
+input {
+  margin: 1rem 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: solid #0b3a40;
+  border-radius: 20px;
+  width: 263px;
+  min-height: 30px;
+  width: 100%;
+}
+
+form {
+  grid-area: form;
+  margin: 0 0 1rem 0;
+  max-width: 500px;
+  max-height: 600px;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.product i {
+  color: #0b3a40;
+}
+
+main {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.checkout-success {
+  text-align: center;
+  border: #0b3a40 2px solid;
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: none;
+  grid-area: checkout-success;
+}
+
+.checkout-success i {
+  color: #0b3a40;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.x {
+  text-align: right;
+}
+
+.checkout-button {
+  color: white;
+  background-color: #0b3a40;
+  border: 2px solid #0b3a40;
+  padding: 5px 10px;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  max-width: 160px;
+  text-align: center;
+  grid-area: checkout-button;
+}
+
+
+.item2 i {
+  background-color: #8f3e00;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.steps {
+  color: #0b3a40;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+/*Mobile styles*/
+@media only screen and (max-width: 659px) {
+  main {
+    grid-template-areas:
+      "checkout-success checkout-success"
+      "h1 h1"
+      "image product"
+      "summary summary"
+      "button button"
+      "h2 h2"
+      "form form"
+      "checkout-button checkout-button";
+  }
+}
+
+/*Desktop styles*/
+@media only screen and (min-width: 660px) {
+  main {
+    grid-template-areas:
+      "checkout-success checkout-success checkout-success checkout-success checkout-success"
+      "h1 h1 . h2 h2"
+      "image product . form form"
+      "summary summary . form form"
+      "button button . form form"
+      "button button . checkout-button checkout-button";
+  }
+  .product i {
+    font-size: 1.4rem;
+  }
+  .product i:hover {
+    color: #8f3e00;
+  }
+  .button a:hover {
+    color: #0c3816;
+    background: white;
+    border: solid 2px #0c3816;
+  }
+  .checkout-success {
+    min-height: 1000px;
+  }
+}
