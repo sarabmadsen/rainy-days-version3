@@ -31,6 +31,7 @@ async function fetchJacket() {
 
         console.log(details);
         
+        title.innerHTML += `${details.name} | Rainy Days`
         h1.innerHTML += `${details.name}`;
         contentContainer.innerHTML = `
                 <div class="image"><img src="${details.images[0].src}" alt="${details.images[0].alt}" /></div>
