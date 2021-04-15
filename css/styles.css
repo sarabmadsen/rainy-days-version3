@@ -88,6 +88,15 @@ input[type="submit"] {
   transform: translateX(-50%);
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 footer {
   background-color: #0b3a40;
   color: white;

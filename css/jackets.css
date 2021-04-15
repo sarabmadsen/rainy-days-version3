@@ -113,6 +113,7 @@ form {
     grid-template-areas:
       "h1 search-heading"
       "results search";
+    min-height: 500px;
   }
   main img {
     width: 200px;

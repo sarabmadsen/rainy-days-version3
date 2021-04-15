@@ -22,6 +22,7 @@ const h1 = document.querySelector("h1");
 const imageContainer = document.querySelector(".image");
 const textContainer = document.querySelector(".text");
 const main = document.querySelector("main");
+const contentContainer = document.querySelector(".content");
 
 async function fetchJacket() {
     try {
@@ -30,21 +31,35 @@ async function fetchJacket() {
 
         console.log(details);
         
-        h1.innerHTML += `${details.name}`
-        imageContainer.innerHTML += `<img src="${details.images[0].src}" alt="${details.images[0].alt}" />`
-        textContainer.innerHTML += `${details.short_description}
-                                    <p>${details.description}</p>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <p>(${details.review_count})</p>
-                                    </div>
-                                    <div class="heart">
-                                        <i class="far fa-heart"></i>
-                                    </div>`
+        h1.innerHTML += `${details.name}`;
+        contentContainer.innerHTML = `
+                <div class="image"><img src="${details.images[0].src}" alt="${details.images[0].alt}" /></div>
+                <div class="details">
+                    ${details.short_description}
+                    <p>${details.description}</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <p>(${details.review_count})</p>
+                    </div>
+                    <div class="heart">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="size">
+                        <p class="bold">Select size:</p>
+                        <div class="size-box">
+                            <button class="box">XS</button>
+                            <button class="box">S</button>
+                            <button class="box">M</button>
+                            <button class="box">L</button>
+                            <button class="box">XL</button>
+                        </div>
+                    </div>
+                    <a class="button" href="../shopping-cart.html">Add to cart</a>
+                </div>`
     } catch(error) {
         console.log(error);
         main.innerHTML = error;

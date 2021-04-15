@@ -7,36 +7,19 @@ main {
 
 h1 {
   display: flex;
-  flex-flow: row wrap;
 }
 
-.main-content {
+.content {
   display: flex;
+  flex-direction: row;
 }
 
-.images {
-  max-width: 880px;
+main img {
+  max-width: 550px;
   width: 100%;
 }
 
-.big {
-  max-width: 880px;
-  width: 100%;
-}
-
-.small1,
-.small2,
-.small3 {
-  max-width: 200px;
-  width: 100%;
-  margin: 1rem 1rem 1rem 0;
-}
-
-.small3 {
-  margin: 1rem 0 1rem 0;
-}
-
-.text-area {
+.details {
   max-width: 880px;
   width: 100%;
   margin-left: 1rem;
@@ -133,5 +116,8 @@ h2 {
     color: #8f3e00;
     background: white;
     border: solid 2px #8f3e00;
+  }
+  .content {
+    min-height: 500px;
   }
 }
